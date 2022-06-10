@@ -1,0 +1,10 @@
+para podermos rodar o projeto, é essencial seguir os passos abaixo de forma linear, ao fim do documento deixei o link de um vídeo breve demonstrando como rodar o mesmo.
+1 - criar um banco de dados nomeado de 'teste_mandarin';
+2 - abrir o caminho do projeto e executar o comando 'composer install';
+3 - executar o comando 'php artisan generate:key';
+4 - executar o comando 'php artisan migrate';
+5 - executar o comando 'php artisan db:seed --class=TaskSeeder';
+6 - executar o comando 'php artisan db:seed --class=TagSeeder';
+7 - executar o comando 'php artisan serve'.
+
+link do vídeo: 
