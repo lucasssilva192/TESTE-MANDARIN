@@ -8,36 +8,127 @@
 		{
 			"name": "/task [POST]",
 			"request": {
-				"method": "GET",
+				"method": "POST",
 				"header": [],
-				"url": null
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"Task teste\",\r\n    \"description\" : \"Teste envio api\",\r\n    \"status\" : \"backlog\",\r\n    \"file_url\" : \"www.com.br\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/task",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"task"
+					]
+				}
 			},
 			"response": []
 		},
 		{
 			"name": "/task/:id [PUT]",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": null
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"file_url\" : \"www.aprovado.com.br\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/task/10",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"task",
+						"10"
+					]
+				}
 			},
 			"response": []
 		},
 		{
 			"name": "/task/:id/status [PATCH]",
 			"request": {
-				"method": "GET",
+				"method": "PATCH",
 				"header": [],
-				"url": null
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/task/10/status",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"task",
+						"10",
+						"status"
+					]
+				}
 			},
 			"response": []
 		},
 		{
 			"name": "/task/:id/tag [POST]",
 			"request": {
-				"method": "GET",
+				"method": "POST",
 				"header": [],
-				"url": null
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"tag_name\" : \"Tag Teste\",\r\n    \"task_id\" : 10\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/task/10/tag",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"task",
+						"10",
+						"tag"
+					]
+				}
 			},
 			"response": []
 		},
@@ -46,7 +137,21 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": null
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/task",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"task"
+					]
+				}
 			},
 			"response": []
 		},
@@ -55,7 +160,23 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": null
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/task/10/file_url",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"task",
+						"10",
+						"file_url"
+					]
+				}
 			},
 			"response": []
 		}
